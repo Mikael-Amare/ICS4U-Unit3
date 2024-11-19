@@ -21,19 +21,10 @@ function reverseString(stringToReverse: string): string {
   }
 }
 
-function main(): void {
   // Prompt the user for input
   const stringToReverse = prompt(`Enter a string: `);
-
-  if (stringToReverse === null || stringToReverse.trim() === ``) {
-    console.log(`No valid input provided.`);
-    return;
-  }
 
   console.log(`The original string is: ${stringToReverse}`);
   const theReversedString = reverseString(stringToReverse);
   console.log(`The reversed string is: ${theReversedString}`);
-}
 
-// Call the main function
-main();
