@@ -9,34 +9,26 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
-/**
- * Reverses a string using recursion.
- * @param stringToReverse The string to reverse.
- * @return The reversed string.
- */
-string reverseString(const string& stringToReverse) {
+static auto reverseString(const std::string& stringToReverse) -> std::string {
     if (stringToReverse.empty()) {
         return "";
     } else {
-        char firstCharacter = stringToReverse[0];
-        string restOfString = stringToReverse.substr(1); // Get the rest of the string
+        const char firstCharacter = stringToReverse[0];
+        const std::string restOfString = stringToReverse.substr(1); // Get the rest of the string
         return reverseString(restOfString) + firstCharacter;
     }
 }
 
 int main() {
-    // Prompt the user for input
-    string stringToReverse;
-    cout << "Enter a string: ";
-    getline(cin, stringToReverse); // Use getline to handle spaces in input
+    std::string stringToReverse;
+    std::cout << "Enter a string: ";
+    std::getline(std::cin, stringToReverse); // Use getline to handle spaces in input
 
-    cout << "The original string is: " << stringToReverse << endl;
+    std::cout << "The original string is: " << stringToReverse << '\n';
 
-    // Call the reverseString function
-    string theReversedString = reverseString(stringToReverse);
-    cout << "The reversed string is: " << theReversedString << endl;
+    const std::string theReversedString = reverseString(stringToReverse);
+
+    std::cout << "The reversed string is: " << theReversedString << '\n';
 
     return 0;
 }
