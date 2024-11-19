@@ -7,24 +7,23 @@
  */
 
 /**
- * Reverses strings using recursion.
- *
- * @param stringToReverse the string to reverse
- * @returns the reversed string
+ * Reverses a string using recursion.
+ * @param stringToReverse The string to reverse.
+ * @return The reversed string.
  */
 function reverseString(stringToReverse: string): string {
-  if (stringToReverse == "") {
-    return ""
+  if (stringToReverse === ``) {
+    return ``;
   } else {
-    let firstCharacter: string = stringToReverse[0]
-    let restOfString: string = stringToReverse.slice(1, stringToReverse.length)
-
-    return reverseString(restOfString) + firstCharacter
+    const firstCharacter = stringToReverse[0];
+    const restOfString = stringToReverse.slice(1); // Use slice to get the rest of the string
+    return reverseString(restOfString) + firstCharacter;
   }
 }
 
-const selectedString = prompt('Enter a string to reverse: ')
+// Prompt the user for input
+const stringToReverse = prompt(`Enter a string: `);
 
-console.log(`The reversed string is ${reverseString(selectedString)}`);
-
-console.log('\nDone.')
+console.log(`The original string is: ${stringToReverse}`);
+const theReversedString = reverseString(stringToReverse);
+console.log(`The reversed string is: ${theReversedString}`);
