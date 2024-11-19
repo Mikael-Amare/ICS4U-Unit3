@@ -8,9 +8,8 @@
 
 /**
  * Reverses a string using recursion.
- *
- * @param stringToReverse - The string to reverse.
- * @returns The reversed string.
+ * @param stringToReverse The string to reverse.
+ * @return The reversed string.
  */
 function reverseString(stringToReverse: string): string {
   if (stringToReverse === ``) {
