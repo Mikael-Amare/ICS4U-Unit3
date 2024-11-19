@@ -24,7 +24,7 @@ static auto reverseString(const std::string& stringToReverse) -> std::string {
 int main() {
     std::string stringToReverse;
     std::cout << "Enter a string: ";
-    std::getline(std::cin, stringToReverse); 
+    std::getline(std::cin, stringToReverse);
     // Use getline to handle spaces in input
 
     std::cout << "The original string is: " << stringToReverse << '\n';
