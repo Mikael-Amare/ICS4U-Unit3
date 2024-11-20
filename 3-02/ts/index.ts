@@ -8,23 +8,23 @@
 
 /**
  * Reverses a string using recursion.
- * @param stringToReverse [number] The string to reverse.
+ * @param userInput [number] The string to do factorial.
  * @return The reversed string.
  */
-function factorialNumber(input: number): number {
-
-        const firstCharacter = stringToReverse[0];
-        // Use slice to get the rest of the string
-        const restOfString = stringToReverse.slice(1);
-        return reverseString(restOfString) + firstCharacter;
+function factorialNumber(userInput: number): number {
+  if (userInput < 0) {
+    return -1;
+  } else if {
+  }
+  const firstCharacter = stringToReverse[0];
+    // Use slice to get the rest of the string
+    const restOfFactorial = userInput - 1;
+    return factorialNumber(restOfFactorial) + firstCharacter;
+    }
 }
 
 // Prompt the user for input
-const input = prompt(`Enter a string: `);
-if (typeof input === "string" && !isNaN(Number(input))) 
-if (input !>= 0) {
-    return (`pls give positive number`);
-} else {
-console.log(`The original string is: ${input}`);
-const newNumber = factorialNumber(input);
-console.log(`The reversed string is: ${newNumber}`);
+const userInput = prompt(`Enter a number: `);
+const newNumber = factorialNumber(userInput);
+if (newNumber = -1)
+console.log(`The factorial of ${userInput} string is: ${newNumber}`);
