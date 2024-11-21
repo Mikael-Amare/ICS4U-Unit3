@@ -1,20 +1,23 @@
 /*
- * This program uses recursion to reverse
- * a string.
+ * This program uses recursion to
+ * calculate factorial of a number
  * @Author Mikael Amare
  * @Version 1.0
- * @Since Nov. 18 2024
+ * @Since Nov. 21 2024
  */
 
 /**
  * Reverses a string using recursion.
  * @param userInput [number] The string to do factorial.
- * @return The reversed string.
+ * @return The userInput string.
  */
 function factorialNumber(userInput: number): number {
   if (userInput < 0) {
     return -1;
-  } else if {
+  } else if (number % 1 === 0) {
+    if (number == 1) {
+    return 1;
+   } else if {  
   }
   const firstCharacter = stringToReverse[0];
     // Use slice to get the rest of the string
