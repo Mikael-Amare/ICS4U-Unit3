@@ -17,19 +17,19 @@ function factorial(userInputInt: number) {
 }
 
 // input
-const userInputInt = (prompt("Enter a positive integer: "));
-if (userInputInt === null) {
+const userInput = (prompt("Enter a positive integer: "));
+if (userInput === null) {
 
-  } else if (userInputInt < 0) {
+  } else if (userInput < 0) {
   console.log("That was not a positive integer.");
 } else {
-    parseInt(userInputInt)
+    parseInt(userInput)
   // call function
-  const factorialAnswer = factorial(userInputInt);
+  const factorialAnswer = factorial(userInput);
   if (factorialAnswer == -1) {
     console.log(`That was not a number.`)
   } else {
-  console.log(`The factorial of ${userInputInt} is ${factorialAnswer}`);
+  console.log(`The factorial of ${userInput} is ${factorialAnswer}`);
   }
 }
 console.log("\nDone.");
