@@ -34,8 +34,8 @@ int main() {
 
     // Try to convert input to an integer
     std::stringstream inputStream(userInput);
-    if (!(inputStream >> userInputInt)) {
-        std::cout << "That was not a number." << std::endl;
+    if (!(inputStream >> userInputInt) || !(inputStream.eof())) {
+        std::cout << "That was not a integer." << std::endl;
     } else {
         // Call factorial function
         int factorialAnswer = factorial(userInputInt);
