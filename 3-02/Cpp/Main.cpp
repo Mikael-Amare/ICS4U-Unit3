@@ -7,10 +7,12 @@
  */
 
 #include <iostream>
+#include <string>
+#include <sstream>
 
+// Function to calculate factorial recursively
 int factorial(int number) {
-    // recursive function calculating factorial
-    if (number == 1) {
+    if (number == 0 || number == 1) {
         return 1;
     } else {
         return number * factorial(number - 1);
@@ -18,17 +20,21 @@ int factorial(int number) {
 }
 
 int main() {
-    // this function gets user input
+    std::string userInput;
     int userInputInt;
 
-    // input
+    // Input prompt
     std::cout << "Enter a positive integer: ";
-    std::cin >> userInputInt;
+    std::getline(std::cin, userInput); // Read input as a string
 
-    if (userInputInt < 0) {
+    // Try to convert input to an integer
+    std::stringstream inputStream(userInput);
+    if (!(inputStream >> userInputInt)) {
+        std::cout << "That was not a number." << std::endl;
+    } else if (userInputInt < 0) {
         std::cout << "That was not a positive integer." << std::endl;
     } else {
-        // call function
+        // Call factorial function
         int factorialAnswer = factorial(userInputInt);
         std::cout << "The factorial of " << userInputInt << " is " << factorialAnswer << std::endl;
     }
