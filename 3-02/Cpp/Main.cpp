@@ -4,6 +4,7 @@
  * @Author Mikael Amare
  * @Version 1.0
  * @Since Nov. 21 2024
+ * Copyright [2024] Mikael Amare
  */
 
 #include <iostream>
@@ -25,7 +26,9 @@ int main() {
 
     // Input prompt
     std::cout << "Enter a positive integer: ";
-    std::getline(std::cin, userInput); // Read input as a string
+
+    // Read input as a string
+    std::getline(std::cin, userInput);
 
     // Try to convert input to an integer
     std::stringstream inputStream(userInput);
@@ -36,7 +39,8 @@ int main() {
     } else {
         // Call factorial function
         int factorialAnswer = factorial(userInputInt);
-        std::cout << "The factorial of " << userInputInt << " is " << factorialAnswer << std::endl;
+        std::cout << "The factorial of " << userInputInt <<
+        " is " << factorialAnswer << std::endl;
     }
 
     std::cout << "\nDone." << std::endl;

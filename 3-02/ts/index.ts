@@ -14,10 +14,10 @@
 
 function factorial(userInputInt: number) {
   // recursive function calculating factorial
-  if (userInputInt === 1) {
+  if (isNaN(userInputInt) || userInputInt < 0) {
+    return -1;
+  } else if (userInputInt === 1 || userInputInt === 0) {
     return 1;
-  } else if (userInputInt === 0) {
-    return 1
   } else {
     return userInputInt * factorial(userInputInt - 1);
   }
@@ -29,15 +29,12 @@ if (userInput === null) {
   console.log(`That was not a number.`);
 } else {
   const userInputInt = parseInt(userInput);
-
-  if (isNaN(userInputInt)) {
-    console.log(`That was not a number.`);
-  } else if (userInputInt < 0) {
-    console.log(`That was not a positive integer.`);
-  } else {
     // Call function
     const factorialAnswer = factorial(userInputInt);
+    if (factorialAnswer === -1) {
+      console.log(`That was not a valid number.`);
+    } else {
     console.log(`The factorial of ${userInputInt} is ${factorialAnswer}`);
+    }
   }
-}
-console.log(`\nDone`)
+console.log(`\nDone.`);
