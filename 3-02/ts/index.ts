@@ -1,33 +1,35 @@
-/*
- * This program uses recursion to
- * calculate factorial of a number
- * @Author Mikael Amare
- * @Version 1.0
- * @Since Nov. 21 2024
- */
+/* Created by: Mr. Coxall
+ * Created on: Sep 2020
+ * This program calculates factorial
+*/
 
-/**
- * Reverses a string using recursion.
- * @param userInput [number] The string to do factorial.
- * @return The userInput string.
- */
-function factorialNumber(userInput: number): number {
-  if (userInput < 0) {
-    return -1;
-  } else if (number % 1 === 0) {
-    if (number == 1) {
+function factorial(userInputInt: number) {
+  // recursive function calculating factorial
+  if (isNaN(userInputInt)) {
+    return -1
+  } else if (userInputInt === 1) {
     return 1;
-   } else if {  
+  } else if (userInputInt === 0) {
+    return 1
+  } else {
+    return userInputInt * factorial(userInputInt - 1);
   }
-  const firstCharacter = stringToReverse[0];
-    // Use slice to get the rest of the string
-    const restOfFactorial = userInput - 1;
-    return factorialNumber(restOfFactorial) + firstCharacter;
-    }
 }
 
-// Prompt the user for input
-const userInput = prompt(`Enter a number: `);
-const newNumber = factorialNumber(userInput);
-if (newNumber = -1)
-console.log(`The factorial of ${userInput} string is: ${newNumber}`);
+// input
+const userInput = (prompt(`Enter a positive integer: `));
+if (userInput == null) {
+  console.log(`No input was made.`)
+} else if (userInput < 0) {
+  console.log(`That was not a positive integer.`);
+} else {
+  const userInputInt = parseInt(userInput)
+  // call function
+  const factorialAnswer = factorial(userInputInt);
+  if (factorialAnswer == -1) {
+    console.log(`That was not a number.`)
+  } else {
+    console.log(`The factorial of ${userInput} is ${factorialAnswer}`);
+  }
+}
+console.log(`\nDone.`);
