@@ -13,7 +13,7 @@
 
 // Function to calculate factorial recursively
 int factorial(int userInputInt) {
-    if (userInputInt < 0 || userInputInt % 1 == 0) {
+    if (userInputInt < 0) {
         return -1;
     } else if (userInputInt == 0 || userInputInt == 1) {
         return 1;
