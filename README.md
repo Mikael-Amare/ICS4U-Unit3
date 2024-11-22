@@ -3,3 +3,4 @@
 How to run a cpp file:
 
  - g++ -o Name Filename.cpp
+ ./filename
