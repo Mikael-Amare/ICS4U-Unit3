@@ -14,6 +14,7 @@
 
 function factorial(userInputInt: number) {
   // recursive function calculating factorial
+  // checks if number qualifies to have a factorial
   if (isNaN(userInputInt) || userInputInt < 0 || userInputInt % 1 !== 0) {
     return -1;
   } else if (userInputInt === 1 || userInputInt === 0) {
